@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from prophet import Prophet
 import plotly.graph_objects as go
-# Generate sample dataset for one day with random sales data
+# Generate dataset for one day with random sales data
 target_date = '2023-07-15'  # Example date to select
 hours = pd.date_range(start=target_date, periods=24, freq='H')
 sales_data = {
