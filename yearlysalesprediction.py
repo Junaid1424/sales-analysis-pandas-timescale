@@ -1,3 +1,7 @@
+import pandas as pd
+from prophet import Prophet
+import matplotlib.pyplot as plt
+
 # Load the dataset
 df = pd.read_csv('sales_dataset.csv')
 
