@@ -1,4 +1,5 @@
 import psycopg2
+from psycopg2 import sql
 ## connection to the database
 ## Remember to replace your credentials
 con = psycopg2.connect(
@@ -24,4 +25,6 @@ for date, sale in data:
     sales.append(sale)
 
 # Create a pandas DataFrame from the extracted data
-df = pd.DataFrame({'date': dates, 'sale': sales})
+sales_data = pd.DataFrame({'date': dates, 'sale': sales})
+# Save the DataFrame to a CSV file
+df.to_csv(sales_data, index=False)
